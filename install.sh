@@ -24,7 +24,7 @@ fi
 
 # Prompt for GitHub token
 echo -n "Enter your GitHub token: "
-read -s GITHUB_TOKEN
+read -s GITHUB_TOKEN < /dev/tty
 echo
 
 # Debug: Check if token was read (show first 4 chars only)
