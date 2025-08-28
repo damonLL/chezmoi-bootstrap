@@ -27,6 +27,9 @@ echo -n "Enter your GitHub token: "
 read -s GITHUB_TOKEN
 echo
 
+# Debug: Check if token was read (show first 4 chars only)
+echo "Token starts with: ${GITHUB_TOKEN:0:4}..."
+
 # Initialize chezmoi with your repo
 ~/.local/bin/chezmoi init --apply https://damonLL:$GITHUB_TOKEN@github.com/damonLL/dot-files.git
 
